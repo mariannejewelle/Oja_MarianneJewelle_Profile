@@ -335,12 +335,7 @@
             </div>
 
             <div class="certificate-filters">
-
-                <button class="filter-btn active" data-filter="all">
-                    All
-                </button>
-
-                <button class="filter-btn" data-filter="webinar">
+                <button class="filter-btn active" data-filter="webinar">
                     Webinars
                 </button>
 
@@ -362,8 +357,12 @@
 
             </div>
 
-            
-            <div class="row g-4" id="certificateGallery">
+            <div class="certificate-carousel" id="certificatePagination">
+                <button class="certificate-page-btn certificate-previous" id="certificatePrevious" type="button" aria-label="Previous certificates">
+                    <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                </button>
+
+                <div class="row g-4" id="certificateGallery">
 
                 <!-- WEBINAR -->
                 <div class="col-md-6 col-lg-4 certificate-item" data-category="webinar">
@@ -629,17 +628,13 @@
                     </div>
                 </div>
 
-            </div>
+                </div>
 
-            <nav class="certificate-pagination" id="certificatePagination" aria-label="Certificate pages" hidden>
-                <button class="certificate-page-btn" id="certificatePrevious" type="button" aria-label="Previous certificates">
-                    <i class="bi bi-chevron-left" aria-hidden="true"></i>
-                </button>
-                <span id="certificatePageStatus" aria-live="polite"></span>
                 <button class="certificate-page-btn" id="certificateNext" type="button" aria-label="Next certificates">
                     <i class="bi bi-chevron-right" aria-hidden="true"></i>
                 </button>
-            </nav>
+                <span class="certificate-page-status" id="certificatePageStatus" aria-live="polite"></span>
+            </div>
 
         </div>
 

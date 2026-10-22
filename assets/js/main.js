@@ -9,7 +9,7 @@ const certificateNext = document.getElementById("certificateNext");
 const certificatePageStatus = document.getElementById("certificatePageStatus");
 
 if (certificateGallery && certificatePagination && certificatePrevious && certificateNext && certificatePageStatus) {
-    let activeCertificateFilter = "all";
+    let activeCertificateFilter = "webinar";
     let certificatePage = 0;
 
     function renderCertificates() {
@@ -19,7 +19,7 @@ if (certificateGallery && certificatePagination && certificatePrevious && certif
         const columns = window.matchMedia("(min-width: 992px)").matches
             ? 3
             : window.matchMedia("(min-width: 768px)").matches ? 2 : 1;
-        const pageSize = columns * 2;
+        const pageSize = columns;
         const pageCount = Math.max(1, Math.ceil(filteredItems.length / pageSize));
         certificatePage = Math.min(certificatePage, pageCount - 1);
 
@@ -30,8 +30,12 @@ if (certificateGallery && certificatePagination && certificatePrevious && certif
             item.style.display = visibleItems.has(item) ? "" : "none";
         });
 
-        certificatePagination.hidden = pageCount <= 1;
-        certificatePageStatus.textContent = `Page ${certificatePage + 1} of ${pageCount}`;
+        const hasMultiplePages = pageCount > 1;
+        certificatePagination.classList.toggle("single-page", !hasMultiplePages);
+        certificatePrevious.hidden = !hasMultiplePages || certificatePage === 0;
+        certificateNext.hidden = !hasMultiplePages;
+        certificatePageStatus.hidden = !hasMultiplePages;
+        certificatePageStatus.textContent = `${certificatePage + 1} of ${pageCount}`;
         certificatePrevious.disabled = certificatePage === 0;
         certificateNext.disabled = certificatePage >= pageCount - 1;
     }

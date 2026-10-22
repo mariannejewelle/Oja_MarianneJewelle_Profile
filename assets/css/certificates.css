@@ -2,6 +2,10 @@
     background: linear-gradient(180deg, #fff7fa 0%, #fffefc 100%);
 }
 
+.certificates-section .section-heading {
+    margin-bottom: 26px;
+}
+
 .certificate-filters {
     position: sticky;
     top: var(--navbar-height, 102px);
@@ -10,7 +14,8 @@
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 45px;
+    margin-top: -12px;
+    margin-bottom: 20px;
     padding: 12px 0;
     background: #fff7fa;
 }
@@ -35,18 +40,46 @@
     box-shadow: 0 12px 25px rgba(214, 51, 132, 0.15);
 }
 
-.certificate-pagination {
-    display: flex;
+.certificate-carousel {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
+    column-gap: 16px;
     margin-top: 32px;
+}
+
+.certificate-carousel.single-page {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.certificate-page-status {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 16px;
     color: var(--dark);
     font-weight: 600;
 }
 
-.certificate-pagination[hidden] {
+.certificate-page-status[hidden] {
     display: none;
+}
+
+.certificate-previous {
+    grid-column: 1;
+}
+
+#certificateGallery {
+    grid-column: 2;
+    width: 100%;
+    margin: 0;
+}
+
+.certificate-carousel.single-page #certificateGallery {
+    grid-column: 1;
+}
+
+#certificateNext {
+    grid-column: 3;
 }
 
 .certificate-page-btn {
@@ -61,6 +94,10 @@
     color: var(--primary-dark);
     cursor: pointer;
     transition: 0.3s;
+}
+
+.certificate-page-btn[hidden] {
+    display: none;
 }
 
 .certificate-page-btn:hover:not(:disabled) {
@@ -146,4 +183,31 @@
 .modal-body img {
     max-height: 75vh;
     object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    .certificate-carousel {
+        grid-template-columns: 36px minmax(0, 1fr) 36px;
+    }
+
+    #certificateGallery {
+        grid-row: 1;
+    }
+
+    .certificate-previous,
+    #certificateNext {
+        grid-row: 1;
+    }
+
+    .certificate-previous {
+        justify-self: start;
+    }
+
+    #certificateNext {
+        justify-self: end;
+    }
+
+    .certificate-page-status {
+        grid-row: 2;
+    }
 }
