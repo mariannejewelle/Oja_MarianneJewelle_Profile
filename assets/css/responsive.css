@@ -1,0 +1,72 @@
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        padding-top: 20px;
+        gap: 8px;
+    }
+
+    .home-section {
+        text-align: center;
+        padding-top: 140px;
+    }
+
+    .home-title {
+        font-size: 50px;
+    }
+
+    .home-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-buttons,
+    .home-socials {
+        justify-content: center;
+    }
+
+    .profile-wrapper {
+        margin-top: 60px;
+    }
+
+    .section-padding {
+        padding: 0 0 56px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .home-title {
+        font-size: 38px;
+    }
+
+    .home-subtitle {
+        font-size: 18px;
+    }
+
+    .home-description {
+        font-size: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .section-padding {
+        padding: 0 0 48px;
+    }
+
+    .experience-card {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .contact-box {
+        padding: 40px 20px;
+    }
+
+    .certificate-card img {
+        height: 180px;
+    }
+
+}

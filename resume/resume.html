@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume of Marianne Jewelle Oja, aspiring Junior Software Developer.">
+    <title>Marianne Jewelle Oja | Resume</title>
+    <link rel="stylesheet" href="../assets/css/resume.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Marianne Jewelle Oja</h1>
+        <p class="title">Junior Software Developer</p>
+        <p class="contact">
+            <a href="mailto:marianjewel20@gmail.com">marianjewel20@gmail.com</a> |
+            <a href="https://github.com/mariannejewelle">github.com/mariannejewelle</a> |
+            <a href="https://credly.com/users/marianne-jewelle-oja">credly.com/users/marianne-jewelle-oja</a>
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Aspiring Junior Software Developer with foundational knowledge in programming, web
+                development, and database management. Experienced in developing functional,
+                user-friendly, and database-driven applications through academic projects. Eager to
+                apply technical and problem-solving skills while continuously learning and
+                contributing to software development.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="entry">
+                <h3>Bachelor of Science in Information Technology</h3>
+                <p>Northeastern College | 2024 – Present</p>
+            </div>
+            <div class="entry">
+                <h3>Information and Communications Technology</h3>
+                <p>Santiago City National High School | Graduated 2024</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Project</h2>
+            <div class="entry">
+                <h3>Restaurant Management System</h3>
+                <p>Academic Project | January – March 2026</p>
+                <ul>
+                    <li>Implemented database-driven features to manage restaurant operations and streamline record processing.</li>
+                    <li>Improved data processing efficiency and reduced reliance on manual procedures.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="entry">
+                <h3>Work Immersion Trainee</h3>
+                <p>Commission on Elections, Santiago City, Philippines | February – March 2024</p>
+                <ul>
+                    <li>Encoded and updated voter information in digital records, organized and maintained 100+ physical documents and records for efficient filing and retrieval.</li>
+                    <li>Handled confidential voter information in accordance with established data privacy and security procedures.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <p><strong>Programming Languages:</strong> C++, C#, JavaScript, PHP</p>
+            <p><strong>Web Development:</strong> HTML, CSS, Bootstrap</p>
+            <p><strong>Database Management:</strong> SQL, MySQL</p>
+        </section>
+
+        <section>
+            <h2>Qualifications and Certificates</h2>
+            <ul>
+                <li>Introduction to Microsoft Azure Data: Core Data Concepts – Microsoft Learn</li>
+                <li>Introduction to Cybersecurity – Cisco Networking Academy</li>
+                <li>Networking Basics – Cisco Networking Academy</li>
+                <li>Computer Systems Servicing (CSS) NC II – TESDA</li>
+            </ul>
+        </section>
+    </main>
+
+    <nav class="resume-actions no-print" aria-label="Resume actions">
+        <button type="button" onclick="window.print()">Print resume</button>
+        <a href="../index.html#resume">Back to portfolio</a>
+    </nav>
+
+    <script>
+        if (new URLSearchParams(window.location.search).has("print")) {
+            window.addEventListener("load", () => {
+                window.setTimeout(() => window.print(), 250);
+            });
+        }
+    </script>
+</body>
+</html>
